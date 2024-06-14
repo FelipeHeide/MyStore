@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+.centraliser {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: Truculenta;
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.store {
+    cursor: pointer;
+  font-family: Truculenta;
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background-color: #fff;
+  color: #000;
+  margin-top: 15px;
+  font-size: 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: -4px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.store:hover {
+  background-color: #000;
+  color: #fff;
+}
+img {
+  position: absolute;
+  z-index: -2;
+  width: 200px;
+}
+
+.circle {
+  left: 200px;
+  bottom: 400px;
+  animation: circle-animation 6s infinite alternate ease-in-out;
+}
+
+@keyframes circle-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -8px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.rectangle {
+  right: 250px;
+  bottom: 350px;
+  animation: rectangle-animation 7s infinite alternate ease-in-out;
+}
+
+@keyframes rectangle-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-6px, 9px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.triangle {
+  left: 400px;
+  bottom: 100px;
+  transform: rotate(50deg);
+  animation: triangle-animation 8s infinite alternate ease-in-out;
+}
+
+@keyframes triangle-animation {
+  0% {
+    transform: rotate(50deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(50deg) translate(12px, -12px);
+  }
+  100% {
+    transform: rotate(50deg) translate(0, 0);
+  }
+}
+
+.hexagone {
+  right: 400px;
+  bottom: 100px;
+  animation: hexagone-animation 5s infinite alternate ease-in-out;
+}
+
+@keyframes hexagone-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

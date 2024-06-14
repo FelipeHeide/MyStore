@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+.product_display {
+    height: 100vh;
+    width: 100vw;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+  }
+  
+  .products {
+    margin: 0;
+    padding: 0px;
+    position: inherit;
+    z-index: 2;
+    display: inline-block;
+    height: 50vh;
+    width: auto;
+    border-radius: 15px;
+    white-space: nowrap;
+
+  }
+  .product{
+    display: inline-block;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    margin-right: 15px;
+    overflow: hidden;
+    cursor: pointer;
+
+  }
+  
+
+  .products img{
+    position: inherit;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+  }
+  .product:hover img{
+    transform: scale(1.05);
+  }
+
+  .info{
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: 0.5s ease-in-out;
+    display: flex;
+    padding: 15px;
+    overflow: hidden;
+    
+  }
+
+  .info h2{
+    text-align: left;
+    display: block;
+  font-family: Truculenta;
+  font-size: 25px;
+  color: black;
+
+  }
+
+  .info p{
+  font-size: 25px;
+    text-align: right;
+    width: 100%;
+  font-family: Truculenta;
+    color: black;
+  }
+
+
+  .product:hover .info{
+    transform: translate(0, -100%);
+  }
+
+  .like {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    height: 50px;
+    margin-bottom: -70px;
+    z-index: 110;
+
+  }
+  .like svg {
+    stroke-width: 2px;
+
+    color: rgb(66, 65, 65);
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+  }
+
+  .like:hover svg{
+    transform: scale(1.1);
+  }

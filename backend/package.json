@@ -1,0 +1,28 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "tienda ecommerce con front y backend implementados y completados, pagos automatisados y optimisados para implementacion en mercado real",
+  "main": "index.js",
+  "scripts": {
+    "heroku-postbuild": "npm rebuild bcrypt --build-from-source",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Felipe Heide",
+  "license": "MIT",
+  "dependencies": {
+    "@stripe/stripe-react-native": "^0.37.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.2.4",
+    "stripe": "^15.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

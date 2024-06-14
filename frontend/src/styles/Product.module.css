@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+
+.back{
+  position: fixed;
+  display: inline-block;
+  top: 40px;
+  left: 40px;
+}
+
+.back span{
+  font-size: 48px;
+  cursor: pointer;
+ color: rgb(70, 49, 4);
+ transition: 0.4s ease-in-out;
+}
+
+
+.back span:hover{
+  transform: scale(1.05) rotate(369deg);
+}
+
+.product{
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+justify-content: center;
+  display: flex;
+ 
+  
+
+}
+.centraliser {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 50%;
+  height: 70%;
+}
+
+.img_section{
+  position: static;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+align-items: center;
+text-align: center;
+
+}
+.img_section img {
+  position: static;
+  object-fit: cover;
+  height: inherit;
+  width: auto;
+  box-shadow: 0 0 20px rgba(101, 73, 45, 0.5);
+
+}
+
+.information {
+  position: static;
+  display: inline-block;
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+}
+
+.information h2{
+  font-family: Truculenta;
+  text-align: center;
+  font-size: 30px;
+}
+
+.information .div_information{
+  border: 1px solid grey;
+  width: 100%;  
+  text-align: left;
+}
+
+.center_information{
+  width: 90%;
+  margin-left: 10%;
+}
+.information p{
+  font-family: Truculenta;
+  font-size: 20px;
+}
+
+.information button{
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid grey;
+  border-top: none;
+}
+.information button:hover{
+  background-color: rgb(245, 238, 161);
+}

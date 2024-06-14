@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+.parent{
+ width: 100vw;
+ height: 100vh;
+ align-items: center;
+justify-content: center;
+ display: flex;
+
+
+}
+
+.centraliser{
+    display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 80%;
+  height: 70%;
+}
+
+
+.products_information{
+    width: 75%;
+    height: 100%;
+    overflow-y: scroll;
+
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px 0 rgba(40, 35, 13, 0.16), 0 2px 10px 0 rgba(39, 33, 11, 0.12);}
+  
+    .products_information::-webkit-scrollbar {
+      width: 10px;
+   }
+
+    .products_information::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+      border-radius: 20px;
+    }
+    .products_information::-webkit-scrollbar-thumb {
+      background-color: #999;
+      border-radius: 10px;
+      border: 2px solid #f1f1f1;
+    }
+.info {
+    display: flex;
+    height: 8%;
+    width: 100%;
+    padding-left: 60px;
+    margin: 0px;
+    box-sizing: border-box;
+  margin-bottom: 30px;
+
+    
+  }
+  
+  .info > *:first-child {
+    flex-basis: 60%;
+
+  }
+  
+  .info > *:nth-child(2) {
+    flex-basis: 30%;
+
+  }
+  
+  .info > *:nth-child(3) {
+    flex-basis: 30%;
+
+  }
+  
+  .info p {
+    display: inline-block;
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 20px;
+
+  }
+
+  .product {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    margin-top: 10px;
+    padding-left: 60px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
+
+  }
+  .product_information{
+    display: flex;
+    width: 45%;
+    
+  }
+  
+  .product_img {
+    position: relative;
+    z-index: 900;
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    display: inline-block;
+  }
+  
+  .product_info {
+    display: flex;
+    margin-top: 10px;
+    padding-left: 20px;
+    height: 200px;
+    justify-content: flex-end;
+  flex-direction: column;
+
+  }
+
+  .product_info p{
+    font-family: "Tilt Neon", sans-serif;
+    margin: 12px 0; 
+  }
+
+  .product_info > *:first-child {
+    color: grey;
+    text-transform: uppercase;
+
+  }
+
+  .product_info > *:first-child {
+    color: grey;
+    text-transform: uppercase;
+
+  }
+  .product_info > *:nth-child(2) {
+    font-size: 20px;
+  }
+
+  .product_info > *:nth-child(3) {
+    font-size: 18px;
+    color: rgb(109, 109, 109);
+  }
+  .quantity {
+    display: flex;
+    margin-top: 10px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    width: 20%;
+
+  }
+  
+  .quantity p {
+    font-family: "Tilt Neon", sans-serif;
+    margin: 0;
+  }
+ 
+
+  .quantity button {
+    background-color: #f3f3f3;
+    border: none;
+    color: #333;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 1px solid rgb(201, 201, 201);
+  }
+  
+  .quantity button:hover {
+    background-color: #ddd;
+  }
+
+ 
+
+  .price {
+    display: flex;
+    margin-top: 10px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+
+  }
+  
+  .price p {
+    font-family: "Tilt Neon", sans-serif;
+    margin: 0;
+    font-size: 25px;
+  }
+
+  .empty_cart{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Tilt Neon", sans-serif;
+    
+  }
+
+
+  
+.checkout_information{
+  width: 30%;
+  height: 100%;
+  overflow-y: hidden;
+  margin-left: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 5px 0 rgba(40, 35, 13, 0.16), 0 2px 10px 0 rgba(39, 33, 11, 0.12);}
+
+  .checkout_information h1{
+    font-family: "Tilt Neon", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+
+  }
+
+
+
+  .select__input {
+    /* Reset default dropdown style */
+    appearance: none;
+    border: 0;
+    margin: 0;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    /* Custom dropdown styling */
+    padding: 0.5rem 1rem;
+    background-color: rgb(236, 235, 235);
+
+    border-radius: 14px;
+    user-select: none;
+    font-family: "Tilt Neon", sans-serif;
+
+  }
+  
+
+
+  :root {
+    --select-icon-size: 16px; /* Icon size */
+    --select-icon-margin: 1rem; /* Icon left/right positioning */
+    --select-text-icon-gap: 0.5rem; /* Space between text and icon */
+  }
+  
+  .select {
+    position: relative;
+  }
+  
+  .select__arrow,
+  .select__flag {
+    display: inline-block;
+    position: absolute;
+    /* Center both icons vertically */
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--select-icon-size);
+    height: var(--select-icon-size);
+    pointer-events: none;
+  }
+  
+  .select__arrow {
+    color: inherit;
+    right: var(--select-icon-margin);
+  }
+  
+  .select__flag {
+    left: var(--select-icon-margin);
+  }
+
+  .shipping_adress{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .shipping_adress input{
+    font-family: "Tilt Neon", sans-serif;
+
+    border-radius: 14px;
+    font-size: 1rem;
+    width: 49%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    appearance: none;
+    border: 0;
+    margin-top: 10px;
+
+    background-color: rgb(241, 239, 239);
+    user-select: none;
+    display: inline-block;
+    box-sizing: border-box;
+
+
+
+
+
+  }
+
+  .payment{
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+  .payment_card input{
+    font-family: "Tilt Neon", sans-serif;
+
+    border-radius: 14px;
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    appearance: none;
+    border: 0;
+    margin-top: 10px;
+
+    background-color: rgb(241, 239, 239);
+    user-select: none;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .payment input{
+    font-family: "Tilt Neon", sans-serif;
+
+    border-radius: 14px;
+    font-size: 1rem;
+    width: 49%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    appearance: none;
+    border: 0;
+    margin-top: 10px;
+
+    background-color: rgb(241, 239, 239);
+    user-select: none;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+
+  .total_price{
+    font-family: "Tilt Neon", sans-serif;
+    text-align: center;
+    border-radius: 14px;
+    font-size: 1rem;
+    width: 100%;
+    font-size: 30px;
+    display: block;
+    box-sizing: border-box;
+    color: #FFD28D; }
+
+
+    .checkout_div{
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+      display: flex;
+      margin-top: 50px;
+    }
+.checkout_button{
+  background-color: #FFD28D;
+  color: rgb(32, 32, 32);
+  font-weight: 900;
+  font-family: "Tilt Neon", sans-serif;
+  padding: 10px;
+  font-size: 20px;
+  width: 65%;
+  height: 100%;
+  border: 1px solid grey;
+  border-radius: 14px;
+cursor: pointer;
+transition: 0.3s;
+
+}
+.checkout_button:hover {
+  box-shadow: 0 0 20px 0 rgba(255, 170, 77, 0.5);
+
+
+}

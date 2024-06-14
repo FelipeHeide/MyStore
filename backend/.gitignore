@@ -1,0 +1,18 @@
+# Environment variables
+.env
+
+# Node modules
+node_modules/
+
+# Build directories
+dist/
+
+# Editor files
+.vscode/
+
+# Lock files
+package-lock.json
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
