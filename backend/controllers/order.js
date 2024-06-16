@@ -159,8 +159,8 @@ router.post('/', async (request, response) => {
           }
         })
       ),
-      success_url: "https://tienda-ecommerce-so3w.onrender.com",
-      cancel_url: "https://tienda-ecommerce-so3w.onrender.com",
+      success_url: "https://mystore-ceha.onrender.com/account",
+      cancel_url: "https://mystore-ceha.onrender.com",
     });
     
     response.json({ url: session.url });
