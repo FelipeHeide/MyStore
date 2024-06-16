@@ -21,10 +21,13 @@ const Cart = () => {
       if(localStorage.getItem("user") === "guest"){
         const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
         const productPromises = cartItems.map(async (item) => {
-          const product = await getProduct(item.id);
-          return { ...product, quantity: item.quantity, _id: item.id };
+    
+          const product = await getProduct(item.product_id);
+          return { ...product, quantity: item.quantity, _id: item.product_id };
         });
         const fetchedProducts = await Promise.all(productPromises);
+        console.log("shhshshshshhshs")
+        console.log(fetchedProducts)
         setProducts(fetchedProducts);
         setTypeUser("guest")
       }
@@ -48,15 +51,17 @@ const Cart = () => {
 
     if (typeUser === "guest") {
       const updatedCart = JSON.parse(localStorage.getItem('cart')).map((item) => {
-        if (item.id === productId) {
+        if (item.product_id === productId) {
           const newQuantity = item.quantity + delta;
           if (newQuantity >= 0) {
+            
             const quantityElement = document.getElementById(`quantity-${productId}`);
+
             const priceElement = document.getElementById(`price-${productId}`);
             if (quantityElement && priceElement) {
               quantityElement.innerHTML = `${newQuantity}`;
               products.map((product) => {
-                if (product.id === productId) {
+                if (product._id === productId) {
                   priceElement.innerHTML = `${(product.price * (item.quantity + delta)).toFixed(2)} $`;
                 }
               });
@@ -115,7 +120,6 @@ const Cart = () => {
   
     Order(user, products, address)
   };
-
 
   return (
     <div>
