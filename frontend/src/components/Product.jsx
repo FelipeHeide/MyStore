@@ -21,7 +21,7 @@ const ProductPage = () => {
           setCart(user.cart)
         }else{
           settypeUser("guest")
-          setCart(localStorage.getItem("cart"))
+          setCart(JSON.parse(localStorage.getItem("cart")))
         }
     };
     fetchData();
