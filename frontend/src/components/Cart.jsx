@@ -12,10 +12,6 @@ const Cart = () => {
   const [shippingAddress, setShippingAddress] = useState('');
   const [ShippingCity, setShippingCity] = useState('');
 
-
-  
-
-
   useEffect(() => {
     const fetchCartProducts = async () => {
       if(localStorage.getItem("user") === "guest"){
@@ -26,8 +22,7 @@ const Cart = () => {
           return { ...product, quantity: item.quantity, _id: item.product_id };
         });
         const fetchedProducts = await Promise.all(productPromises);
-        console.log("shhshshshshhshs")
-        console.log(fetchedProducts)
+         console.log(fetchedProducts)
         setProducts(fetchedProducts);
         setTypeUser("guest")
       }
@@ -114,11 +109,15 @@ const Cart = () => {
   const handlePlaceOrder = async(e) => {
     e.preventDefault();   
 
-    let user = JSON.parse(localStorage.getItem('user'))
+    let user = localStorage.getItem('user')
+    if(user == "guest"){
+      alert("Create an account to make orders!")
+      return
+    }
     let products = JSON.parse(localStorage.getItem('user')).cart
     let address = country + " / " + ShippingCity + " / " + shippingAddress
-  
-    Order(user, products, address)
+    
+    Order(JSON.parse(user), products, address)
   };
 
   return (
